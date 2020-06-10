@@ -1,7 +1,14 @@
 #cards, 
-#results {
+#results, 
+#play-again {
     display: flex;
     justify-content: center;
+}
+
+#play-again {
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
 }
 
 .card, 
