@@ -3,7 +3,7 @@ console.log('JS is running...')
 const initializeGame = () => {
 
     /* Resetting the game */
-    let counter = 0
+    let counter = []
     $('#cards').html('')
     $('#results').html('')
 
@@ -72,10 +72,12 @@ const initializeGame = () => {
         if (misteryNum === cardNumber) {
             $(e.target).css('background-color', 'green')
             e.target.innerHTML = `<p>Card ${misteryNum}</p>`
-            counter++
+            if (counter.indexOf(misteryNum) === -1) {
+                counter.push(misteryNum)
+            }
             console.log(counter)
 
-            if (counter === 10) {
+            if (counter.length === 10) {
                 $('#play-again').show()
             }
 
