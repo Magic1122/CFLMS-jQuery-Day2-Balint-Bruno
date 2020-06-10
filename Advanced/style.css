@@ -1,0 +1,19 @@
+#cards, 
+#results {
+    display: flex;
+    justify-content: center;
+}
+
+.card, 
+.card-mistery {
+    width: 20vw;
+    height: 30vh;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin: 1rem;
+}
+
+.card p, 
+.card-mistery p {
+    text-align: center;
+}
