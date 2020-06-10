@@ -55,13 +55,14 @@ $(".card").draggable({
 });
 
 const handleCardDrop = (e, ui) => {
-    console.log('event', $(e.target).attr('number'))
+    // console.log('event', $(e.target).attr('number'))
     const misteryNum =  $(e.target).attr('number')
-    console.log('UI', $(ui.draggable[0]).attr('number'))
+    // console.log('UI', $(ui.draggable[0]).attr('number'))
     const cardNumber = $(ui.draggable[0]).attr('number')
 
     if (misteryNum === cardNumber) {
         $(e.target).css('background-color', 'green')
+        e.target.innerHTML = `<p>Card ${misteryNum}</p>`
     }
 
 }
